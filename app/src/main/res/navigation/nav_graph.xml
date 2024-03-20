@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LoginFragment">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.myapplication.ui.fragment.LoginFragment"
+        android:label="UpKeep"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/WorkOrderListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/WorkOrderListFragment"
+        android:name="com.example.myapplication.ui.fragment.WorkOrderListFragment"
+        android:label="Work Orders"
+        tools:layout="@layout/fragment_work_order_list">
+
+        <action
+            android:id="@+id/action_work_order_list_fragment_to_details"
+            app:destination="@id/WorkOrderDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/WorkOrderDetails"
+        android:name="com.example.myapplication.ui.fragment.WorkOrderDetailsFragment"
+        android:label="Work Order Details"
+        tools:layout="@layout/fragment_work_order_details_layout" />
+
+</navigation>
